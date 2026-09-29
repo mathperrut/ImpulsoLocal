@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Peça seu diagnóstico gratuito." />
+  <title>Contato · ImpulsoLocal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (igual em todas as páginas) -->
+  <nav aria-label="Menu principal">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Impulso<span>Local</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menu">
+        <svg class="icon icon-abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+        <svg class="icon icon-fechar" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="contato.html" class="nav-cta" aria-current="page">Falar com especialista</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CABEÇALHO DA PÁGINA -->
+  <header class="page-header">
+    <ol class="breadcrumb" aria-label="Você está em">
+      <li><a href="index.html">Início</a></li>
+      <li aria-current="page">Contato</li>
+    </ol>
+    <h1>Vamos conversar?</h1>
+    <p>Preencha o formulário e um especialista entra em contato em até 24 horas.</p>
+  </header>
+
+  <main>
+    <section class="bg-cinza">
+      <div class="container">
+        <div class="form-grid">
+
+          <!-- Informações de contato -->
+          <aside class="form-info">
+            <h2 class="section-title">Diagnóstico gratuito</h2>
+            <p>Conte um pouco sobre o seu negócio. Na conversa entendemos o seu momento e indicamos o plano certo, sem compromisso.</p>
+            <div class="contact-item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>Atendemos em toda a região Sul Fluminense</span></div>
+            <div class="contact-item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg><a href="https://wa.me/5524999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20ImpulsoLocal." target="_blank" rel="noopener">WhatsApp: (24) 99999-9999</a></div>
+            <div class="contact-item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg><a href="mailto:contato@impulsolocal.com.br">contato@impulsolocal.com.br</a></div>
+            <div class="contact-item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Seg a Sex, 9h às 18h</span></div>
+          </aside>
+
+          <!-- Formulário -->
+          <div class="form-box">
+            <form id="leadForm" novalidate>
+              <p class="form-legenda"><span class="obrigatorio" aria-hidden="true">*</span> campo obrigatório</p>
+
+              <!-- Aparece quando o visitante já enviou um pedido antes -->
+              <div class="aviso-dados" id="avisoDados" role="status">
+                <span>Preenchemos com os dados do seu último pedido.</span>
+                <button type="button" class="link-botao" id="limparDados">Limpar formulário</button>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nome">Seu nome <span class="obrigatorio" aria-hidden="true">*</span></label>
+                  <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" autocomplete="name" required aria-describedby="erro-nome" />
+                  <p class="msg-erro" id="erro-nome" aria-live="polite"></p>
+                </div>
+                <div class="form-group">
+                  <label for="whatsapp">WhatsApp <span class="obrigatorio" aria-hidden="true">*</span></label>
+                  <input type="text" id="whatsapp" name="whatsapp" placeholder="Ex: (24) 99999-9999" inputmode="numeric" maxlength="15" autocomplete="tel-national" required aria-describedby="erro-whatsapp" />
+                  <p class="msg-erro" id="erro-whatsapp" aria-live="polite"></p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail <span class="opcional">(opcional)</span></label>
+                <input type="email" id="email" name="email" placeholder="Ex: joao@salaodamaria.com.br" autocomplete="email" aria-describedby="erro-email" />
+                <p class="msg-erro" id="erro-email" aria-live="polite"></p>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="empresa">Nome do negócio <span class="obrigatorio" aria-hidden="true">*</span></label>
+                  <input type="text" id="empresa" name="empresa" placeholder="Ex: Salão da Maria" autocomplete="organization" required aria-describedby="erro-empresa" />
+                  <p class="msg-erro" id="erro-empresa" aria-live="polite"></p>
+                </div>
+                <div class="form-group">
+                  <label for="cnpj">CNPJ <span class="opcional">(opcional)</span></label>
+                  <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" inputmode="numeric" maxlength="18" aria-describedby="erro-cnpj dica-cnpj" />
+                  <p class="dica" id="dica-cnpj">Se ainda não tiver, pode deixar em branco.</p>
+                  <p class="msg-erro" id="erro-cnpj" aria-live="polite"></p>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="segmento">Segmento <span class="obrigatorio" aria-hidden="true">*</span></label>
+                  <select id="segmento" name="segmento" required aria-describedby="erro-segmento">
+                    <option value="">Selecione...</option>
+                  <option>Restaurante / Lanchonete</option>
+                  <option>Salão de Beleza / Barbearia</option>
+                  <option>Academia / Crossfit</option>
+                  <option>Clínica / Saúde</option>
+                  <option>Loja de Roupas / Moda</option>
+                  <option>Oficina / Auto</option>
+                  <option>Imobiliária</option>
+                  <option>Educação / Cursos</option>
+                  <option>Outro</option>
+                  </select>
+                  <p class="msg-erro" id="erro-segmento" aria-live="polite"></p>
+                </div>
+                <div class="form-group">
+                  <label for="plano">Plano de interesse <span class="opcional">(opcional)</span></label>
+                  <select id="plano" name="plano">
+                    <option value="">Ainda não sei</option>
+                    <option value="inicial">Starter · 1 canal</option>
+                    <option value="crescimento">Crescimento · 2 canais</option>
+                    <option value="profissional">Profissional · todos os canais</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="meta">Qual sua principal meta? <span class="obrigatorio" aria-hidden="true">*</span></label>
+                <textarea id="meta" name="meta" maxlength="500" placeholder="Ex: Quero lotar minha agenda nos fins de semana e atrair clientes novos do bairro..." required aria-describedby="erro-meta contador-meta"></textarea>
+                <p class="contador" id="contador-meta">0/500</p>
+                <p class="msg-erro" id="erro-meta" aria-live="polite"></p>
+              </div>
+
+              <div class="form-acoes">
+                <button type="submit" class="btn-primary btn-submit" id="btnEnviar">Quero meu diagnóstico gratuito →</button>
+                <button type="button" class="btn-primary btn-outline btn-cancelar" id="btnCancelar">Cancelar envio</button>
+              </div>
+            </form>
+
+            <!-- Tela de sucesso -->
+            <div class="form-success" id="formSuccess" role="status" tabindex="-1">
+              <div class="success-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+              <h2>Pedido enviado, <span id="nomeSucesso"></span>!</h2>
+              <p>Nossa equipe vai chamar você no WhatsApp <strong id="zapSucesso"></strong> em até 24 horas.</p>
+              <div class="success-acoes">
+                <button type="button" class="btn-primary btn-outline" id="btnCorrigir">Corrigir meus dados</button>
+                <button type="button" class="btn-primary" id="btnNovo">Enviar outro pedido</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p><strong>ImpulsoLocal</strong> · Marketing digital para pequenas e médias empresas</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="planos.html">Planos</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <p class="copy">© <span id="ano">2026</span> ImpulsoLocal. Projeto acadêmico. UniFOA, Sistemas de Informação.</p>
+  </footer>
+
+  <!-- Botão flutuante: caminho alternativo para quem não quer preencher formulário -->
+  <a href="https://wa.me/5524999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20ImpulsoLocal." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp (abre em nova aba)">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+    <span class="rotulo">Fale no WhatsApp</span>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script src="js/formulario.js"></script>
+</body>
+</html>

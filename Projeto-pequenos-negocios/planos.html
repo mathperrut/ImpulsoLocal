@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Compare os planos da ImpulsoLocal." />
+  <title>Planos · ImpulsoLocal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (igual em todas as páginas) -->
+  <nav aria-label="Menu principal">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Impulso<span>Local</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menu">
+        <svg class="icon icon-abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+        <svg class="icon icon-fechar" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="planos.html" aria-current="page">Planos</a></li>
+        <li><a href="contato.html" class="nav-cta">Falar com especialista</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CABEÇALHO DA PÁGINA -->
+  <header class="page-header">
+    <ol class="breadcrumb" aria-label="Você está em">
+      <li><a href="index.html">Início</a></li>
+      <li aria-current="page">Planos</li>
+    </ol>
+    <h1>Investimento acessível para cada fase</h1>
+    <p>Sem fidelidade no primeiro mês. Cancele quando quiser, sem multa.</p>
+  </header>
+
+  <main>
+    <section class="bg-cinza">
+      <div class="container text-center">
+        <h2 class="section-title">Compare os planos</h2>
+        <p class="section-sub">Mostramos primeiro o que muda de um plano para o outro. Os recursos em comum ficam em “Ver todos os recursos”.</p>
+
+        <!-- Alternador de cobrança (flexibilidade) -->
+        <div class="billing-toggle" role="group" aria-label="Forma de pagamento">
+          <button type="button" data-cobranca="mensal" aria-pressed="true">Mensal</button>
+          <button type="button" data-cobranca="anual" aria-pressed="false">Anual <span class="desconto">2 meses grátis</span></button>
+        </div>
+
+        <div class="plans-grid">
+        <article class="plan-card">
+          <h3 class="plan-name">Starter</h3>
+          <span class="plan-porte">1 canal · para começar</span>
+          <p class="plan-price">R$ <span class="valor" data-mensal="497" data-anual="414">497</span><span>/mês</span></p>
+          <p class="plan-cobranca" data-anual-texto="cobrado R$ 4.970 por ano">cobrança mensal</p>
+          <p class="plan-desc">Ideal para quem está começando no digital.</p>
+          <ul class="plan-features">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>1 canal de anúncios (Instagram ou Google)</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Até R$ 500 em verba de anúncios</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>2 artes de anúncio por mês</li>
+          </ul>
+          <ul class="plan-features extra" id="extra-inicial">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Relatório mensal simplificado</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Suporte via WhatsApp</li>
+          </ul>
+          <button type="button" class="btn-ver-mais" aria-expanded="false" aria-controls="extra-inicial">
+            <span>Ver todos os recursos</span> <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <a href="contato.html?plano=inicial" class="btn-primary btn-outline btn-plan">Começar agora</a>
+        </article>
+        <article class="plan-card destaque">
+          <div class="plan-badge">Mais escolhido</div>
+          <h3 class="plan-name">Crescimento</h3>
+          <span class="plan-porte">2 canais · para crescer</span>
+          <p class="plan-price">R$ <span class="valor" data-mensal="997" data-anual="831">997</span><span>/mês</span></p>
+          <p class="plan-cobranca" data-anual-texto="cobrado R$ 9.970 por ano">cobrança mensal</p>
+          <p class="plan-desc">Para quem quer aumentar as vendas locais.</p>
+          <ul class="plan-features">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>2 canais (Instagram + Google)</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Até R$ 2.000 em verba de anúncios</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>5 artes + textos dos anúncios</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Atendimento automático no WhatsApp</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Reunião de resultados a cada 15 dias</li>
+          </ul>
+          <ul class="plan-features extra" id="extra-crescimento">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Google Meu Negócio otimizado</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Painel de resultados em tempo real</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Suporte via WhatsApp</li>
+          </ul>
+          <button type="button" class="btn-ver-mais" aria-expanded="false" aria-controls="extra-crescimento">
+            <span>Ver todos os recursos</span> <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <a href="contato.html?plano=crescimento" class="btn-primary btn-plan">Quero este plano</a>
+        </article>
+        <article class="plan-card">
+          <h3 class="plan-name">Profissional</h3>
+          <span class="plan-porte">Todos os canais · gestão completa</span>
+          <p class="plan-price">R$ <span class="valor" data-mensal="1.997" data-anual="1.664">1.997</span><span>/mês</span></p>
+          <p class="plan-cobranca" data-anual-texto="cobrado R$ 19.970 por ano">cobrança mensal</p>
+          <p class="plan-desc">Para empresas que querem liderar o mercado local.</p>
+          <ul class="plan-features">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Todos os canais disponíveis</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Verba de anúncios sem limite</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Produção de vídeo para anúncios</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Gestor de conta só seu</li>
+          </ul>
+          <ul class="plan-features extra" id="extra-profissional">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Funil de vendas completo</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sistema para organizar os contatos (CRM)</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Suporte prioritário 7 dias por semana</li>
+          </ul>
+          <button type="button" class="btn-ver-mais" aria-expanded="false" aria-controls="extra-profissional">
+            <span>Ver todos os recursos</span> <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <a href="contato.html?plano=profissional" class="btn-primary btn-outline btn-plan">Falar com consultor</a>
+        </article>
+        </div>
+        <p class="plans-nota">A verba de anúncios é o valor pago diretamente ao Instagram, Facebook ou Google. Ela não está incluída no preço do plano.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p><strong>ImpulsoLocal</strong> · Marketing digital para pequenas e médias empresas</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="planos.html">Planos</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <p class="copy">© <span id="ano">2026</span> ImpulsoLocal. Projeto acadêmico. UniFOA, Sistemas de Informação.</p>
+  </footer>
+
+  <!-- Botão flutuante: caminho alternativo para quem não quer preencher formulário -->
+  <a href="https://wa.me/5524999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20ImpulsoLocal." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp (abre em nova aba)">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+    <span class="rotulo">Fale no WhatsApp</span>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script src="js/planos.js"></script>
+</body>
+</html>
