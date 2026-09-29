@@ -5,7 +5,7 @@ Projeto do QPRO · Script II (1ª AVD) · Sistemas de Informação · UniFOA 202
 Site de uma agência fictícia de marketing digital para pequenos negócios locais
 (restaurantes, salões, academias, clínicas, lojas e oficinas).
 
-**Site no ar:** https://mathperrut.github.io/Projeto-pequenos-neg-cios/
+**Site no ar:** https://mathperrut.github.io/ImpulsoLocal/Projeto-pequenos-negocios/
 **Slides da apresentação:** [`slides/Apresentacao_QPRO_ScriptII.pptx`](slides/Apresentacao_QPRO_ScriptII.pptx)
 
 ## Estrutura
