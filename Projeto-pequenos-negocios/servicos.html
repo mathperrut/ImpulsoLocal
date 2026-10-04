@@ -9,17 +9,13 @@
 </head>
 <body>
 
-  <!-- NAVBAR (igual em todas as páginas) -->
+  <!-- menu -->
   <nav aria-label="Menu principal">
     <div class="nav-inner">
       <a href="index.html" class="logo">Impulso<span>Local</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menu">
-        <svg class="icon icon-abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
-        <svg class="icon icon-fechar" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-      </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Início</a></li>
-        <li><a href="servicos.html" aria-current="page">Serviços</a></li>
+        <li><a href="servicos.html" class="ativo">Serviços</a></li>
         <li><a href="planos.html">Planos</a></li>
         <li><a href="contato.html" class="nav-cta">Falar com especialista</a></li>
       </ul>
@@ -30,7 +26,8 @@
   <header class="page-header">
     <ol class="breadcrumb" aria-label="Você está em">
       <li><a href="index.html">Início</a></li>
-      <li aria-current="page">Serviços</li>
+      <li>›</li>
+      <li>Serviços</li>
     </ol>
     <h1>O que fazemos por você</h1>
     <p>Soluções focadas em resultado real: clientes entrando, vendas acontecendo.</p>
@@ -101,7 +98,7 @@
     <p class="copy">© <span id="ano">2026</span> ImpulsoLocal. Projeto acadêmico. UniFOA, Sistemas de Informação.</p>
   </footer>
 
-  <!-- Botão flutuante: caminho alternativo para quem não quer preencher formulário -->
+  <!-- botão do whatsapp -->
   <a href="https://wa.me/5524999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20ImpulsoLocal." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp (abre em nova aba)">
     <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
     <span class="rotulo">Fale no WhatsApp</span>
