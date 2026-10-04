@@ -1,4 +1,4 @@
-/* =========================================================
+/* 
    ImpulsoLocal · Folha de estilos única do site
    Organização:
      1. Variáveis e reset
@@ -11,9 +11,9 @@
      8. Rodapé e botão flutuante de WhatsApp
      9. Responsividade (media queries)
    Todos os layouts de grade usam FLEXBOX (display:flex + flex-wrap).
-   ========================================================= */
+    */
 
-/* ---------- 1. Variáveis e reset ---------- */
+/*  1. Variáveis e reset  */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -61,7 +61,7 @@ textarea:focus-visible {
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
 }
 
-/* ---------- 2. Componentes globais ---------- */
+/*  2. Componentes globais  */
 .container { max-width: 1100px; margin: 0 auto; }
 section { padding: 4.5rem 1.5rem; }
 
@@ -147,7 +147,7 @@ section { padding: 4.5rem 1.5rem; }
 .breadcrumb a { color: #fff; }
 .breadcrumb li + li::before { content: "›"; margin-right: .4rem; }
 
-/* ---------- 3. Navbar + menu hambúrguer ---------- */
+/*  3. Navbar + menu hambúrguer  */
 nav {
   position: sticky;
   top: 0;
@@ -215,7 +215,7 @@ nav {
 .menu-toggle[aria-expanded="true"] .icon-abrir { display: none; }
 .menu-toggle[aria-expanded="true"] .icon-fechar { display: block; }
 
-/* ---------- 4. Seções da Home ---------- */
+/*  4. Seções da Home  */
 .hero {
   background: linear-gradient(135deg, var(--azul) 0%, var(--azul-medio) 60%, #0f3460 100%);
   color: var(--branco);
@@ -377,7 +377,7 @@ nav {
 .cta-section .btn-primary { background: var(--azul); color: var(--branco); font-size: 1.05rem; padding: 1rem 2.4rem; }
 .cta-section .btn-primary:hover { background: #0a0a1a; }
 
-/* ---------- 5. Página Serviços ---------- */
+/*  5. Página Serviços  */
 .services-grid {
   display: flex;
   flex-wrap: wrap;
@@ -418,7 +418,7 @@ nav {
   font-weight: 700;
 }
 
-/* ---------- 6. Página Planos ---------- */
+/*  6. Página Planos  */
 /* Alternador mensal / anual */
 .billing-toggle {
   display: inline-flex;
@@ -529,7 +529,7 @@ nav {
 
 .plans-nota { margin-top: 2rem; font-size: .88rem; color: var(--cinza-texto); }
 
-/* ---------- 7. Página Contato (formulário) ---------- */
+/*  7. Página Contato (formulário)  */
 .form-grid {
   display: flex;
   flex-wrap: wrap;
@@ -645,7 +645,7 @@ nav {
 .form-success p { font-size: .92rem; color: var(--cinza-texto); margin-bottom: 1.5rem; }
 .success-acoes { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; }
 
-/* ---------- 8. Rodapé e botão flutuante ---------- */
+/*  8. Rodapé e botão flutuante  */
 footer {
   background: var(--azul);
   color: #bbb;
@@ -687,7 +687,7 @@ footer a:hover { color: var(--laranja); }
 .whatsapp-float:hover { transform: translateY(-3px); background: #17733F; }
 .whatsapp-float .icon { font-size: 1.35rem; }
 
-/* ---------- 9. Responsividade ---------- */
+/*  9. Responsividade  */
 /* Tablet e celular: navegação vira menu hambúrguer */
 @media (max-width: 860px) {
   .menu-toggle { display: flex; }
