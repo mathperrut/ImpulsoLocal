@@ -1,4 +1,4 @@
-/* =========================================================
+/* 
    formulario.js · só é carregado em contato.html
    1. Máscaras (WhatsApp e CNPJ)
    2. Regras de validação de cada campo
@@ -7,7 +7,7 @@
    5. Tela de sucesso: "Corrigir meus dados" e "Enviar outro pedido"
    6. Lembrar os dados do último pedido (visitante recorrente)
    7. Plano vindo da página de planos (?plano=...)
-   ========================================================= */
+    */
 
 const form = document.getElementById('leadForm');
 const telaSucesso = document.getElementById('formSuccess');
@@ -27,7 +27,7 @@ const campos = {
   meta: document.getElementById('meta'),
 };
 
-/* ---------- 1. Máscaras ---------- */
+/*  1. Máscaras  */
 
 // Impede digitar o sinal de menos (proteção contra erros)
 function bloquearNegativo(event) {
@@ -74,7 +74,7 @@ function atualizarContador() {
 }
 campos.meta.addEventListener('input', atualizarContador);
 
-/* ---------- 2. Regras de validação ----------
+/*  2. Regras de validação 
    Cada função recebe o valor e devolve:
    - '' (texto vazio) se estiver tudo certo
    - a mensagem de erro, explicando COMO corrigir */
@@ -133,7 +133,7 @@ const regras = {
   },
 };
 
-/* ---------- 3. Mostrar / limpar erros ---------- */
+/* 3. Mostrar / limpar erros  */
 
 function mostrarErro(nomeCampo, mensagem) {
   const campo = campos[nomeCampo];
@@ -163,7 +163,7 @@ Object.keys(regras).forEach((nomeCampo) => {
   });
 });
 
-/* ---------- 4. Envio (simulado) com cancelar ---------- */
+/*  4. Envio (simulado) com cancelar  */
 let envioEmAndamento = null;
 
 form.addEventListener('submit', (e) => {
@@ -209,7 +209,7 @@ function concluirEnvio() {
   telaSucesso.focus();
 }
 
-/* ---------- 5. Depois do envio: o usuário continua no controle ---------- */
+/*  5. Depois do envio: o usuário continua no controle  */
 
 // Volta para o formulário AINDA PREENCHIDO
 document.getElementById('btnCorrigir').addEventListener('click', () => {
@@ -228,7 +228,7 @@ document.getElementById('btnNovo').addEventListener('click', () => {
   campos.meta.focus();
 });
 
-/* ---------- 6. Lembrar dados do último pedido ---------- */
+/*  6. Lembrar dados do último pedido  */
 // O localStorage guarda informações no navegador do próprio visitante.
 // try/catch: em aba anônima ou com bloqueio, o site continua funcionando.
 const CAMPOS_LEMBRADOS = ['nome', 'whatsapp', 'email', 'empresa', 'cnpj', 'segmento'];
@@ -269,7 +269,7 @@ document.getElementById('limparDados').addEventListener('click', () => {
   campos.nome.focus();
 });
 
-/* ---------- 7. Plano escolhido na página de planos ---------- */
+/*  7. Plano escolhido na página de planos  */
 // planos.html envia para contato.html?plano=crescimento
 const planoDaUrl = new URLSearchParams(window.location.search).get('plano');
 
